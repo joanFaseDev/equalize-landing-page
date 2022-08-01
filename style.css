@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
+
+:root {
+  /* Typography */
+  --fs-200: 0.5rem; /*8px*/
+  --fs-400: 16px; /*16px*/
+  --fs-450: 1.125rem; /*18px*/
+  --fs-500: 1.25rem; /*20px*/
+  --fs-800: 2rem; /*32px*/
+  --fs-1200: 2.5rem; /*40px*/
+  --fs-1600: 5.5rem; /*88px*/
+
+  --fw-400: 400;
+  --fw-700: 700;
+
+  --ff-default: "IBM Plex Sans", sans-serif;
+
+  /* Colors */
+  --clr-primary: #fa7453;
+  --clr-secondary: #66e2dc;
+  --clr-tertiary: #ffb964;
+  --clr-neutral-0: #191826;
+  --clr-neutral-100: #fcfaf9;
+
+  /* Space */
+  --space-1: 1rem; /*16px*/
+  --space-1-5: 1.5rem; /*24px*/
+  --space-2: 2rem; /*32px*/
+  --space-2-25: 2.25rem; /*36px*/
+  --space-2-5: 2.5rem; /*40px*/
+  --space-2-5-1: 2.626rem; /*42px*/
+  --space-3: 3rem; /*48px*/
+  --space-4: 4rem; /*64px*/
+}
+
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: var(--fs-400, 16px);
+}
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--ff-default, sans-serif);
+  font-size: var(--fs-400, 16px);
+  font-weight: var(--fw-400, 400);
+  color: var(--clr-neutral-0, #191826);
+  background: var(--clr-neutral-100, #fcfaf9);
+}
+
+header {
+  --space-4: 10.375rem;
+}
+
+main {
+  background: var(--clr-neutral-0, #191826);
+  border-radius: var(--fs-200, 0.5rem);
+  position: relative;
+}
+
+main > div:first-child {
+  --space-1-5: var(--space-3, 3rem);
+  --space-4: 11.25rem;
+}
+
+h1 {
+  --space-4: 1.25rem;
+  font-size: var(--fs-1200, 2.5rem);
+  line-height: var(--space-3, 3rem);
+}
+
+h2 {
+  font-size: var(--fs-800, 2rem);
+  line-height: var(--space-2-5, 2.5rem);
+}
+
+p {
+  /* Paragraph's default line height is 26px */
+  line-height: var(--line-height-p, 1.625rem);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Blur image if there's no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+button {
+  font: inherit;
+}
+
+/* COMPOSITION */
+
+/* UTILITY */
+.m-inline {
+  margin-inline: var(--space-1-5, 1.5rem);
+}
+
+.m-bottom {
+  margin-bottom: var(--space-4, 4rem);
+}
+
+.p-top {
+  padding-top: var(--space-2-5, 2.5rem);
+}
+
+.text-color-primary {
+  color: var(--clr-neutral-0, #191826);
+}
+
+.text-color-secondary {
+  color: var(--clr-neutral-100, #fcfaf9);
+}
+
+/* BLOCK */
+.wrapper-illustration {
+  position: absolute;
+  top: -6.125rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.illustration {
+  width: auto;
+  height: 26.875rem;
+  margin-inline: 5rem auto;
+}
+
+.card {
+  background-color: var(--clr-primary, #fa7453);
+  color: var(--clr-neutral-100, #fcfaf9);
+  border-radius: var(--fs-200, 0.5rem);
+  padding: var(--space-3, 3rem) 0;
+}
+
+.card__title,
+.card__commercial {
+  margin-inline: var(--space-2-25, 2.25rem);
+}
+
+.card__commercial {
+  margin-top: 1.33rem;
+  margin-bottom: var(--space-2-25, 2.25rem);
+  font-size: var(--fs-450, 1.125rem);
+}
+
+.card__price,
+.card__btn {
+  margin-inline: var(--space-2-5-1);
+}

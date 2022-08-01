@@ -3,86 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/favicon-32x32.png"
+      href="./starter-code/assets/favicon-32x32.png"
     />
-
     <title>Frontend Mentor | Equalizer landing page</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <div class="wrapper">
-        <div class="wrapper image">
+    <header class="[ m-inline p-top m-bottom ]">
+      <div class="">
+        <div class="[ m-bottom ]">
           <img
             src="./starter-code/assets/logo.svg"
             alt="Equalizer's logo which is simply the word 'equalizer' written in lowercase."
           />
         </div>
-        <h1>We make your music sound extraordinary.</h1>
-        <p>
-          A system audio equalizer specifically designed for Android and iOS.
-          Freely tune the way your music sounds with a professional grade
-          parametric EQ & volume mixer. Control bass, mids, treble, gain
-          control, reverb, and more!
-        </p>
+        <div class="">
+          <h1 class="[ m-bottom ]">We make your music sound extraordinary.</h1>
+          <p>
+            A system audio equalizer specifically designed for Android and iOS.
+            Freely tune the way your music sounds with a professional grade
+            parametric EQ & volume mixer. Control bass, mids, treble, gain
+            control, reverb, and more!
+          </p>
+        </div>
       </div>
     </header>
-    <main>
-      <div class="wrapper image">
+    <main class="">
+      <div class="[ m-inline m-bottom ]">
+        <img src="./starter-code/assets/bg-pattern-2.svg" alt="A background image made out of sperical forms.">
+      </div>
+      <div class="wrapper-illustration">
         <img
           src="./starter-code/assets/illustration-app.png"
           alt="A smartphone screen playing some music app."
-          class=""
+          class="[ illustration ]"
         />
       </div>
       <div class="card">
-        <h2>Premium EQ</h2>
-        <p>
+        <h2 class="card__title">Premium EQ</h2>
+        <p class="card__commercial">
           Get expert-level control with a robust equalizer, volume mixer, and
           spatial audio. Take your listening experience to a whole new level and
           access all our incredible features!
         </p>
-        <p><span>$4</span> / month</p>
-        <div class="btn">
-          <a href="#apple" type="button"
-            ><img
+        <p class="card__price"><span>$4</span> / month</p>
+        <div class="card__btn">
+          <button class="btn"><img
+              class="btn__icon"
               src="./starter-code/assets/icon-apple.svg"
               alt="A white apple with a good bite in it."
             />
-            iOS Download</a
+            iOS Download</b²utton
           >
         </div>
-        <div class="btn">
-          <a href="#android"
-            ><img
+        <div class="card__btn">
+          <button class="btn"><img
+              class="btn__icon"
               src="./starter-code/assets/icon-android.svg"
               alt="A black squared robot."
             />
-            Android Download</a
+            Android Download</button
           >
         </div>
       </div>
     </main>
-    <footer>
-      <div class="wrapper">
-        <div class="wrapper image">
+    <footer class="[ m-inline ]">
+      <div>
+        <div>
           <img
             src="./starter-code/assets/logo.svg"
             alt="Equalizer's logo which is simply the word 'equalizer' written in lowercase."
           />
         </div>
-        <div class="wrapper">
+        <div>
           <p>
             All rights reserved © Equalizer 2021 <br />Have any problems?
             Contact us via social media or email us at
             <a href="#equalizer">equalizer@example.com</a>
           </p>
         </div>
-        <div class="wrapper">
+        <div>
           <img
             src="./starter-code/assets/icon-facebook.svg"
             alt="The Facebook logo, a white lowercase 'f' on a black background."
