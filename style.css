@@ -28,6 +28,7 @@
   --space-0-5: 0.5rem; /*8px*/
   --space-0-75: 0.75rem; /*12px*/
   --space-1: 1rem; /*16px*/
+  --space-1-25: 1.25rem; /*20px*/
   --space-1-5: 1.5rem; /*24px*/
   --space-1-75: 1.75rem; /*28px*/
   --space-2: 2rem; /*32px*/
@@ -37,6 +38,7 @@
   --space-3: 3rem; /*48px*/
   --space-3-25: 3.25rem; /*52px*/
   --space-4: 4rem; /*64px*/
+  --space-5: 5rem; /*80px*/
 }
 
 /* RESET & REGULAR CSS */
@@ -127,7 +129,18 @@ button {
   border: none;
 }
 
+footer {
+  position: absolute;
+  top: 107.5rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 /* COMPOSITION */
+.left-spacing > * + * {
+  margin-left: var(--space-1-25, 1.25rem);
+}
 
 /* UTILITY */
 .m-inline {
@@ -255,6 +268,14 @@ button {
   --fs-450: var(--fs-1400, 4.0625rem);
 }
 
+.footer__img-wrapper {
+  --space-4: var(--space-2, 2rem);
+}
+
+.left-spacing {
+  --space-4: var(--space-5, 5rem);
+}
+
 /* EXCEPTION */
 .btn-hover-secondary:hover {
   background-color: var(--clr-secondary, #66e2dc);
@@ -262,4 +283,9 @@ button {
 
 .btn-hover-tertiary:hover {
   background-color: var(--clr-tertiary, #ffb964);
+}
+
+.img-hover-primary:hover {
+  filter: invert(60%) sepia(26%) saturate(2850%) hue-rotate(325deg)
+    brightness(99%) contrast(97%);
 }

@@ -92,10 +92,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Stack Overflow - Change an svg color](https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element) - This helped me understand how to properly apply hovering effect on svg.
+- [CodePen - Filter Generator](https://codepen.io/sosuke/pen/Pjoqqp) -
+  This gave me the right values to use for CSS filtering functions.
 
 ## Author
 
@@ -103,6 +102,6 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- CUBE CSS
+- Kevin
+- Barrett Sonntag
