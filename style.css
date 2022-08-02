@@ -3,11 +3,13 @@
 :root {
   /* Typography */
   --fs-200: 0.5rem; /*8px*/
+  --fs-300: 0.75rem; /*12px*/
   --fs-400: 16px; /*16px*/
   --fs-450: 1.125rem; /*18px*/
   --fs-500: 1.25rem; /*20px*/
   --fs-800: 2rem; /*32px*/
   --fs-1200: 2.5rem; /*40px*/
+  --fs-1400: 4.0625rem; /*65px*/
   --fs-1600: 5.5rem; /*88px*/
 
   --fw-400: 400;
@@ -23,17 +25,21 @@
   --clr-neutral-100: #fcfaf9;
 
   /* Space */
+  --space-0-5: 0.5rem; /*8px*/
+  --space-0-75: 0.75rem; /*12px*/
   --space-1: 1rem; /*16px*/
   --space-1-5: 1.5rem; /*24px*/
+  --space-1-75: 1.75rem; /*28px*/
   --space-2: 2rem; /*32px*/
   --space-2-25: 2.25rem; /*36px*/
   --space-2-5: 2.5rem; /*40px*/
   --space-2-5-1: 2.626rem; /*42px*/
   --space-3: 3rem; /*48px*/
+  --space-3-25: 3.25rem; /*52px*/
   --space-4: 4rem; /*64px*/
 }
 
-/* RESET */
+/* RESET & REGULAR CSS */
 *,
 *::before,
 *::after {
@@ -67,7 +73,6 @@ header {
 
 main {
   background: var(--clr-neutral-0, #191826);
-  border-radius: var(--fs-200, 0.5rem);
   position: relative;
 }
 
@@ -92,11 +97,17 @@ p {
   line-height: var(--line-height-p, 1.625rem);
 }
 
+span {
+  --fs-450: var(--fs-500, 1.25rem);
+  --space-4: var(--space-2, 2rem);
+}
+
 a {
   text-decoration: none;
 }
 
 img {
+  --space-1: var(--space-0-5, 0.5rem);
   max-width: 100%;
   display: block;
 }
@@ -107,7 +118,13 @@ img:not([alt]) {
 }
 
 button {
+  --space-1-75: var(--space-2, 2rem);
+  --space-3: var(--space-1, 1rem);
+  --space-4: var(--space-1, 1rem);
   font: inherit;
+  display: block;
+  width: 100%;
+  border: none;
 }
 
 /* COMPOSITION */
@@ -117,12 +134,28 @@ button {
   margin-inline: var(--space-1-5, 1.5rem);
 }
 
+.m-top {
+  margin-top: var(--space-0-75, 0.75rem);
+}
+
+.m-right {
+  margin-right: var(--space-1, 1rem);
+}
+
 .m-bottom {
   margin-bottom: var(--space-4, 4rem);
 }
 
+.m-left {
+  margin-left: var(--space-1, 1rem);
+}
+
 .p-top {
   padding-top: var(--space-2-5, 2.5rem);
+}
+
+.p-top-bottom {
+  padding: var(--space-3, 3rem) 0;
 }
 
 .text-color-primary {
@@ -131,6 +164,55 @@ button {
 
 .text-color-secondary {
   color: var(--clr-neutral-100, #fcfaf9);
+}
+
+.background-primary {
+  background-color: var(--clr-primary, #fa7453);
+}
+
+.background-neutral-0 {
+  background-color: var(--clr-neutral-0, #191826);
+}
+
+.background-neutral-100 {
+  background-color: var(--clr-neutral-100, #fcfaf9);
+}
+
+.border-radius {
+  border-radius: var(--fs-300, 0.75rem);
+}
+
+.font-size {
+  font-size: var(--fs-450, 1.125rem);
+}
+
+.font-weight-regular {
+  font-weight: var(--fw-400, 400);
+}
+
+.font-weight-bold {
+  font-weight: var(--fw-700, 700);
+}
+
+.line-height {
+  line-height: var(--space-1-75, 1.75rem);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-justify {
+  justify-content: center;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.overflow {
+  overflow: hidden;
 }
 
 /* BLOCK */
@@ -149,24 +231,35 @@ button {
 }
 
 .card {
-  background-color: var(--clr-primary, #fa7453);
-  color: var(--clr-neutral-100, #fcfaf9);
-  border-radius: var(--fs-200, 0.5rem);
-  padding: var(--space-3, 3rem) 0;
+  position: absolute;
+  top: 23.75rem;
 }
 
 .card__title,
 .card__commercial {
-  margin-inline: var(--space-2-25, 2.25rem);
+  --space-1-5: var(--space-2-25, 2.25rem);
 }
 
 .card__commercial {
-  margin-top: 1.33rem;
-  margin-bottom: var(--space-2-25, 2.25rem);
-  font-size: var(--fs-450, 1.125rem);
+  --space-4: var(--space-2-25, 2.25rem);
 }
 
 .card__price,
 .card__btn {
-  margin-inline: var(--space-2-5-1);
+  --space-1-5: var(--space-2-5-1, 2.626rem);
+}
+
+.card__price {
+  --space-1-75: var(--space-3-25, 3.25rem);
+  --space-4: var(--space-2, 2rem);
+  --fs-450: var(--fs-1400, 4.0625rem);
+}
+
+/* EXCEPTION */
+.btn-hover-secondary:hover {
+  background-color: var(--clr-secondary, #66e2dc);
+}
+
+.btn-hover-tertiary:hover {
+  background-color: var(--clr-tertiary, #ffb964);
 }
